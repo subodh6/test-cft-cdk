@@ -9,9 +9,9 @@ sudo mv /tmp/cas-scheduler.war $TOMCAT_HOME/webapps/ROOT.war
 sudo $TOMCAT_HOME/bin/startup.sh
 
 # Wait for Tomcat to fully stop (adjust the sleep duration based on your application's shutdown time)
-# sleep 10
+# sleep 60
 
 # Start Tomcat
 # sudo $TOMCAT_HOME/bin/startup.sh
-sleep 30
+sleep 60
 # tail -f $TOMCAT_HOME/logs/catalina.out
