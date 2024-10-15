@@ -4,7 +4,7 @@ echo $TOMCAT_HOME
 sudo $TOMCAT_HOME/bin/shutdown.sh
 sleep 60
 sudo rm -rf $TOMCAT_HOME/webapps/*
-sudo mv /tmp/cas-scheduler.war $TOMCAT_HOME/webapps/ROOT.war
+sudo cp /tmp/cas-scheduler.war $TOMCAT_HOME/webapps/ROOT.war
 # sudo cp -R /tmp/*.war $TOMCAT_HOME/webapps
 sudo $TOMCAT_HOME/bin/startup.sh
 
