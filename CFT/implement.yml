@@ -6,7 +6,7 @@ Parameters:
     Type: String
     Description: The GitHub repository **Mandatory field
     AllowedPattern: ".+"
-    Default: "matson-hello-world"
+    # Default: "matson-hello-world"
 
   GitHubBranch:
     Type: String
