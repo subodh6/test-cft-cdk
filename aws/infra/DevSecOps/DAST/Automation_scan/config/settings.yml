@@ -3,4 +3,4 @@ connection:
 scan_info:
   - app_name: devopssphere.site
     scan_config_name: http://devopssphere.site
-status_check_interval: 600
+status_check_interval: 60
