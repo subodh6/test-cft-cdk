@@ -1,6 +1,6 @@
 connection:
-  region: us3
+  region: us2
 scan_info:
-  - app_name: ankitadevops.online
-    scan_config_name: http://ankitadevops.online
+  - app_name: devopssphere.site
+    scan_config_name: http://devopssphere.site
 status_check_interval: 60
