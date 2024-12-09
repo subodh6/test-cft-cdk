@@ -9,6 +9,7 @@ from lib.helpers import scan_automation
 import boto3
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError
 
+
 def get_ssm_parameter(name):
     ssm_client = boto3.client('ssm')
     try:
