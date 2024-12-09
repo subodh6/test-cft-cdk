@@ -52,8 +52,8 @@ phases:
       
     
  
-# artifacts:
-#   files: '**/build_artifacts/*'
-#   discard-paths: yes
+artifacts:
+  files: '**/build_artifacts/*'
+  discard-paths: yes
 
 
