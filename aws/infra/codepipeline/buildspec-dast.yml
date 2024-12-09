@@ -11,15 +11,22 @@ phases:
       - yum update -y
       - yum install jq -y
       - pip install requests
+      - pip install ruamel.yaml
 
   build:
     commands:
-      - echo "Source artifact reference:$CODEBUILD_SOURCE_VERSION"
-      - echo "automation for DAST Phase"
-      - cp -r aws/infra/DevSecOps/DAST/* .
-      - python3 Automation_scan.py
+      # - cp -r aws/infra/DevSecOps/DAST/* .
+      # - cd Automation_scan/bin 
+      # - python3 main.py & PYTHON_PID=$!; tail -f ../log/scan_automation.log & TAIL_PID=$!; wait $PYTHON_PID; kill $TAIL_PID 
+      - |
+   
+       echo "automation for DAST Phase"
+       cp -r aws/infra/DevSecOps/DAST/* .
+       echo "Running DAST Scan..."
+       cd Automation_scan/bin 
+       python3 main.py & PYTHON_PID=$!; tail -f ../log/scan_automation.log & TAIL_PID=$!; wait $PYTHON_PID; kill $TAIL_PID 
+       
 
   post_build:
     commands:
       - echo "DAST phase completed "
-
