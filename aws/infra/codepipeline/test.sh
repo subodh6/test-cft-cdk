@@ -43,7 +43,8 @@ echo "Downloading Required files for codedeploy"
  
 
 cp target/cas-scheduler-admin-1.0.2.war .
- 
+
+mkdir build_artifacts
 
 mv cas-scheduler-admin-1.0.2.war cas-scheduler.war
  
