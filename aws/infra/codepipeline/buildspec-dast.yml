@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Skipping yum update..."
+
+  pre_build:
+    commands:
+      - echo "version controller"
+      - yum update -y
+      - yum install jq -y
+      - pip install requests
+
+  build:
+    commands:
+      - echo "Source artifact reference:$CODEBUILD_SOURCE_VERSION"
+      - echo "automation for DAST Phase"
+      - cp -r aws/infra/DevSecOps/DAST/* .
+      - python3 Automation_scan.py
+
+  post_build:
+    commands:
+      - echo "DAST phase completed "
+
